@@ -157,7 +157,7 @@ var ratio_green = '#023020';
                     }
 
                     // get percentage with one decimal point
-                    var percents_print = percents.toFixed(1).replace('.', ',');
+                    var percents_print = percents.toFixed(1).replace(',', '.');
 
                     // add ratio stats
                     var ratio_label = $('<dt class="kudoshits"></dt>').text('Score:');
