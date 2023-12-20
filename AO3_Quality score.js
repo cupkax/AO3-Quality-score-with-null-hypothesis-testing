@@ -11,6 +11,7 @@
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
 // @include     http://archiveofourown.org/*
 // @include     https://archiveofourown.org/*
+// @license MIT
 // ==/UserScript==
 
 // ~~ SETTINGS ~~ //
