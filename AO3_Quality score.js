@@ -2,13 +2,14 @@
 // @name        AO3: Quality score (Adjusted Kudos/Hits ratio)
 // @description Uses the kudos/hits ratio, number of chapters, and statistical evaluation to score and sort AO3 works.
 // @namespace   https://greasyfork.org/scripts/3144-ao3-kudos-hits-ratio
-// @author      Min (Small edits made by TheShinySnivy, modernized by Assistant)
-// @version     2.0
-// @grant       none
+// @author      cupkax
+// @version     2.2
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @include     http://archiveofourown.org/*
 // @include     https://archiveofourown.org/*
 // @license     MIT
+// @downloadURL https://update.greasyfork.org/scripts/482730/AO3%3A%20Quality%20score%20%28Adjusted%20KudosHits%20ratio%29.user.js
+// @updateURL https://update.greasyfork.org/scripts/482730/AO3%3A%20Quality%20score%20%28Adjusted%20KudosHits%20ratio%29.meta.js
 // ==/UserScript==
 
 // Configuration object: centralizes all settings for easier management
@@ -22,9 +23,9 @@ const CONFIG = {
         high: 7   // percentage level separating yellow and green background
     },
     colors: {
-        red: '#ffdede',    // background color for low scores
-        yellow: '#fdf2a3', // background color for medium scores
-        green: '#023020'   // background color for high scores
+        red: '#8b0000',    // background color for low scores
+        yellow: '#994d00', // background color for medium scores
+        green: '#006400'   // background color for high scores
     }
 };
 
@@ -105,7 +106,7 @@ const CONFIG = {
                 // Add ratio stats
                 const $ratioLabel = $('<dt class="kudoshits">').text('Score:');
                 const $ratioValue = $('<dd class="kudoshits">').text(`${percents_print}`);
-                $hitsValue.after($ratioValue, $ratioLabel);
+                $hitsValue.after($ratioLabel, $ratioValue);
 
                 if (CONFIG.colourBackground) {
                     if (percents >= CONFIG.thresholds.high) {
