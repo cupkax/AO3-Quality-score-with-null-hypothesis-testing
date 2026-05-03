@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name        AO3: Quality score 2
-// @description Fixed calculation for my other script
+// @description Uses the kudos/hits ratio, number of chapters, and statistical evaluation to score and sort AO3 works. Fixes the calculation from the original script.
 // @author      cupkax
 // @version     1.0
 // @include     http://archiveofourown.org/*
 // @include     https://archiveofourown.org/*
 // @license     MIT
 // @grant       none
+// ==/UserScript==
 
 // AO3 ships jQuery on every page, so we use the in-page copy via the global $.
 // (No @require needed — pulling in a second jQuery just bloats load.)
